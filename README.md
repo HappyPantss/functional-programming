@@ -1,2 +1,2 @@
 # functional-programming
-Repo for functional-programming CMD 2020/2021
+This is the repo for functional-programming CMD 2020/2021
