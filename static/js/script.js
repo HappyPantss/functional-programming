@@ -4,16 +4,52 @@ console.log("Survey Answers are:", surveyAnswers)
 
 const colomnName = "oogKleur"
 const hexBrown = "663300"
+const hexBlue = "0099ff"
+const hexGreen = "009900"
+const rgbCode = "(139,69,19)"
+
+// Source: https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+function componentToHex (c) {
+    let hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
 
 // Arrow function
-const replaceToUpperCase = surveyAnswers.map(answer => answer[colomnName].replace("#", "").replace("Bruin", hexBrown).toUpperCase());
+const replaceAll = surveyAnswers.map(answer => answer[colomnName]
+    .replace("#", "")
+    .replace(" ", "")
+    .toUpperCase()
+    .replace("BRUIN", hexBrown)
+    // Replace blue and lightblue for 1 hex
+    .replace("BLAUW", hexBlue)
+    .replace("LICHT", "")
+    .replace("GROEN", hexGreen)
+    // Replace RGB for hex
+    .replace("RGB", "")
+    .replace(".", ",")
+    .replace(rgbCode, (rgbToHex(139,69,19)))
+    .replace("", "#")
+);
+
+// IF ELSE BLUE
+// const replaceBlue = surveyAnswers.filter(answer => {
+//     if(answer[colomnName].includes("BLUE")){
+//         console.log('Er staat blauw in!')
+//     } else {
+//         console.log('Er staat geen blauw in!')
+//     }
+// })
 
 // Regular function
 // const replaceToUpperCase = surveyAnswers.map(function(answer){
-//     return answer[colomnName].toUpperCase();
+//     return answer[colomnName].toLowerCase();
 // })
 
-console.log(replaceToUpperCase)
+console.log(replaceAll)
 
 // FIRST OLD (WORKS)
 // let surveyAnswers = data // requires data from data.js
