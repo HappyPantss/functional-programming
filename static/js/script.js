@@ -1,17 +1,34 @@
-// FIRST: oogKleur to UpperCase with arrow function
-const surveyAnswers = data
+// FIRST NEW: oogKleur to UpperCase with arrow function
+let surveyAnswers = data // requires data from data.js
 console.log("Survey Answers are:", surveyAnswers)
 
-const kolomNaam = "oogKleur"
-const specificAnswer = surveyAnswers.map(answer => answer[kolomNaam].toLocaleUpperCase())
+const colomnName = "oogKleur"
+const hexBrown = "663300"
 
-console.log("lijstAntwoorden: ", specificAnswer)
+// Arrow function
+const replaceToUpperCase = surveyAnswers.map(answer => answer[colomnName].replace("#", "").replace("Bruin", hexBrown).toUpperCase());
+
+// Regular function
+// const replaceToUpperCase = surveyAnswers.map(function(answer){
+//     return answer[colomnName].toUpperCase();
+// })
+
+console.log(replaceToUpperCase)
+
+// FIRST OLD (WORKS)
+// let surveyAnswers = data // requires data from data.js
+// console.log("Survey Answers are:", surveyAnswers)
+
+// const colomnName = "oogKleur"
+// const specificAnswer = surveyAnswers.map(answer => answer[colomnName].toUpperCase())
+
+// console.log("Eye colors: ", specificAnswer)
 
 // SECOND: filter the data with only oogKleur using a function
 // const surveyAnswers = data
-// const kolomNaam = "oogKleur"
+// const colomnName = "oogKleur"
 
-// let lijstAntwoorden = getAnswersForQuestion(surveyAnswers, kolomNaam)
+// let lijstAntwoorden = getAnswersForQuestion(surveyAnswers, colomnName)
 
 // console.log("lijstAntwoorden: ", lijstAntwoorden)
 
