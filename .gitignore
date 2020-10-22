@@ -1,4 +1,4 @@
 node_modules
 *.json
 *.csv
-static/js/data.js
+data.js
