@@ -4,7 +4,7 @@ console.log("Survey Answers are:", surveyAnswers)
 
 const colomnName = "oogKleur"
 const hexBrown = "663300"
-const hexBlue = "0099ff"
+const hexBlue = "0099FF"
 const hexGreen = "009900"
 const rgbCode = "(139,69,19)"
 
@@ -35,6 +35,33 @@ const replaceAll = surveyAnswers.map(answer => answer[colomnName]
     .replace("", "#")
 );
 
+const showBrown = replaceAll.filter(answer => answer === "#" + hexBrown);
+
+console.log(replaceAll)
+console.log(showBrown)
+
+// Write everything in a table (kinda working)
+// const theloop = document.getElementById("loopie")
+// const thecolor = document.getElementsByTagName("td")
+// const holder = theloop;
+
+// const makeTable = () => {
+//     for(var i = 0; i < replaceAll.length; i++){ 
+//         holder.innerHTML += "<td>" + replaceAll[i] + "</td>";
+//     }
+// }
+
+// makeTable();
+
+// Change all background-colors (not working)
+// const colorChange = () => {
+//     for(var i = 0; i < replaceAll.length; i++){ 
+//         document.getElementsByTagName("td").style.color = replaceAll[i];
+//     }
+// }
+
+// colorChange();
+
 // IF ELSE BLUE
 // const replaceBlue = surveyAnswers.filter(answer => {
 //     if(answer[colomnName].includes("BLUE")){
@@ -48,8 +75,6 @@ const replaceAll = surveyAnswers.map(answer => answer[colomnName]
 // const replaceToUpperCase = surveyAnswers.map(function(answer){
 //     return answer[colomnName].toLowerCase();
 // })
-
-console.log(replaceAll)
 
 // FIRST OLD (WORKS)
 // let surveyAnswers = data // requires data from data.js
