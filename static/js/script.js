@@ -1,5 +1,5 @@
 // Endpoint which returns locations of parking places, including area IDs
-import { endpoint, selectedColumn} from './config.js'
+import { endpoint, endpointTwo, selectedColumn} from './config.js'
 
 getData(endpoint)
  .then(RDWData => {

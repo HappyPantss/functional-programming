@@ -2,7 +2,7 @@
 let surveyAnswers = data // requires data from data.js
 console.log("Survey Answers are:", surveyAnswers)
 
-const colomnName = "oogKleur"
+const columnName = "oogKleur"
 const hexBrown = "663300"
 const hexBlue = "0099FF"
 const hexGreen = "009900"
@@ -19,7 +19,7 @@ let rgbToHex = (r, g, b) => {
 } 
 
 // Arrow function eye colors
-const replaceAll = surveyAnswers.map(answer => answer[colomnName]
+const replaceAll = surveyAnswers.map(answer => answer[columnName]
     .replace("#", "")
     .replace(" ", "")
     .toUpperCase()
@@ -68,7 +68,7 @@ makeTable();
 
 // IF ELSE BLUE
 // const replaceBlue = surveyAnswers.filter(answer => {
-//     if(answer[colomnName].includes("BLUE")){
+//     if(answer[columnName].includes("BLUE")){
 //         console.log('Er staat blauw in!')
 //     } else {
 //         console.log('Er staat geen blauw in!')
@@ -77,23 +77,23 @@ makeTable();
 
 // Regular function
 // const replaceToUpperCase = surveyAnswers.map(function(answer){
-//     return answer[colomnName].toLowerCase();
+//     return answer[columnName].toLowerCase();
 // })
 
 // FIRST OLD (WORKS)
 // let surveyAnswers = data // requires data from data.js
 // console.log("Survey Answers are:", surveyAnswers)
 
-// const colomnName = "oogKleur"
-// const specificAnswer = surveyAnswers.map(answer => answer[colomnName].toUpperCase())
+// const columnName = "oogKleur"
+// const specificAnswer = surveyAnswers.map(answer => answer[columnName].toUpperCase())
 
 // console.log("Eye colors: ", specificAnswer)
 
 // SECOND: filter the data with only oogKleur using a function
 // const surveyAnswers = data
-// const colomnName = "oogKleur"
+// const columnName = "oogKleur"
 
-// let lijstAntwoorden = getAnswersForQuestion(surveyAnswers, colomnName)
+// let lijstAntwoorden = getAnswersForQuestion(surveyAnswers, columnName)
 
 // console.log("lijstAntwoorden: ", lijstAntwoorden)
 
