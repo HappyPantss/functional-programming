@@ -15,6 +15,9 @@ I want to know why Park and Ride spaces are developed, why **you** should use th
 
 For more information, click [here](https://github.com/HappyPantss/functional-programming/wiki/Research#questions).
 
+## Most interesting Functional Patterns
+To find more about my most interesting Functional Patters, click [here](https://github.com/HappyPantss/functional-programming/wiki/Cleaning#functional-programming-in-my-code).
+
 # Installation
 **Clone the repository:**
 `https://github.com/HappyPantss/functional-programming.git`
